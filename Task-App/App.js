@@ -1,27 +1,15 @@
-import React from 'react';
-import { View, Text, StyleSheet } from 'react-native';
+import { NativeBaseProvider } from 'native-base';
+import NotVerfiyScreen from "./src/Screens/NotVerfiyScreen";
 
-const HolaMundo = () => {
+export default function App() {
   return (
-    <View style={styles.container}>
-      <Text style={styles.texto}>Hola Mundo</Text>
-    </View>
+    <NativeBaseProvider>
+      <NotVerfiyScreen />
+    </NativeBaseProvider>
   );
-};
+}
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center',
-    backgroundColor: '#F5FCFF',
-  },
-  texto: {
-    fontSize: 32,
-    fontWeight: 'bold',
-    textAlign: 'center',
-    color: '#333333',
-  },
-});
-
-export default HolaMundo;
+// LoginScreen
+// RegisterScreen
+// HomeScreen
+// NotVerfiyScreen
